@@ -61,7 +61,7 @@ date_default_timezone_set('America/Sao_Paulo');
             Ola, <?php echo htmlspecialchars($_SESSION['nome']); ?> |
             Data/hora atual: <span id="hora"></span> |
             Sessao expira em: <span id="sessao"></span> |
-            Seu crachá: <?php echo htmlspecialgitchars($_SESSION['cracha']); ?> |
+            Seu crachá: <?php echo htmlspecialchars($_SESSION['cracha']); ?> |
             <a href="logout.php">Sair</a>
         </p>
     </header>
