@@ -56,7 +56,7 @@ date_default_timezone_set('America/Sao_Paulo');
     </script>
 </head>
 <body onload="relogio(); contagemSessao();">
-    <header>
+    <header style="background-color: aqua;">
         <!-- header com nome do usuario, hora atual, tempo de sessao, cracha e link para logout -->
         <div class="informacoesSessao" id="informacoesSessao" style="display: flex; justify-content: space-between;">
             <p>
@@ -71,5 +71,20 @@ date_default_timezone_set('America/Sao_Paulo');
         </div>
     </header>
 
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="cadastro-ocorrencia.php">Cadastrar ocorrencia</a></li>
+                    <li><a href="ocorrencia-cadastrada.php">Listar ocorrencias a revisar</a></li>
+                    <li><a href="ocorrencia-revisada.php">Listar ocorrencias revisadas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <?php include "cadastro-ocorrencia.php"; ?>
+        </main>
+    </div>
 </body>
 </html>
