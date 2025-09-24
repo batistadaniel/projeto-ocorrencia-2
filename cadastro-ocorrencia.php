@@ -37,8 +37,8 @@ while ($row = mysqli_fetch_assoc($querySub)) {
 </form>
 
 <script>
-// subcategorias vindas do banco
-const subcategorias = <?php echo json_encode($subcategorias ?? []); ?>;
+    // subcategorias vindas do banco
+    const subcategorias = <?php echo json_encode($subcategorias ?? []); ?>;
 </script>
 <script src="./assets/js/components.js"></script>
 <script src="./assets/js/scripts.js"></script>

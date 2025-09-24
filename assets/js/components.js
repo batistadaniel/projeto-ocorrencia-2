@@ -1,10 +1,14 @@
 function campoFuncionario() {
     return `
         <div>
-            <label>Nome:</label>
-            <input type="text" name="nomeFuncionario" required>
-            <label>Cracha:</label>
-            <input type="text" name="crachaFuncionario" required>
+            <label for="crachaFuncionario">Cracha: </label>
+            <input type="text" name="crachaFuncionario" id="crachaFuncionario" required>
+            <labe for="nomeFuncionario"l>Nome: </labe>
+            <input type="text" name="nomeFuncionario" id="nomeFuncionario">
+            <label for="setorFuncionario">Setor: </label>
+            <input type="text" name="setorFuncionario" id="setorFuncionario">
+
+            <img id="fotoFuncionarioPreview" src="" alt="Foto do funcionário" style="max-width:100px; display:none;">
         </div>
     `;
 }
@@ -12,9 +16,8 @@ function campoFuncionario() {
 function dataHoraFato() {
     return `
         <div>
-            <label>Dia e Horario do Fato:</label>
-            <input type="date" name="diaFato" required>
-            <input type="time" name="horaFato" required>
+            <label for="dataHoraFato">Dia e Horario do Fato:</label>
+            <input type="datetime-local" name="dataHoraFato" id="dataHoraFato" required>
         </div>
     `;
 }
@@ -22,10 +25,10 @@ function dataHoraFato() {
 function campoVelocidade() {
     return `
         <div>
-            <label>Velocidade Real:</label>
-            <input type="text" name="velocidadeReal" required>
-            <label>Velocidade Parametrizada:</label>
-            <input type="text" name="velocidadeParametrizada" required>
+            <label for="velocidadeReal">Velocidade Real:</label>
+            <input type="text" name="velocidadeReal" id="velocidadeReal" required>
+            <label for="velocidadeParametrizada">Velocidade Parametrizada:</label>
+            <input type="text" name="velocidadeParametrizada" id="velocidadeParametrizada" required>
         </div>
     `;
 }
@@ -33,12 +36,21 @@ function campoVelocidade() {
 function campoVeiculo() {
     return `
         <div>
-            <label>Prefixo:</label>
-            <input type="text" name="prefixo" required>
-            <label>Linha:</label>
-            <input type="text" name="linha" required>
-            <label>Setor:</label>
-            <input type="text" name="setorVeiculo" required>
+            <label for="prefixo">Prefixo:</label>
+            <input type="text" name="prefixo" id="prefixo" required>
+            <label for="linha">Linha:</label>
+            <input type="text" name="linha" id="linha" required>
+            <label for="setorVeiculo">Setor:</label>
+            <input type="text" name="setorVeiculo" id="setorVeiculo" required>
+        </div>
+    `;
+}
+
+function campoDescricao () {
+    return `
+        <div>
+            <label for="descricao">Descricao do fato:</label>
+            <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Descreva os fatos e observacoes aqui!"></textarea>
         </div>
     `;
 }
