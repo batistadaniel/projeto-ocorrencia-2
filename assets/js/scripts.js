@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         // descrever SAC aqui! id's de 38 a 43
+        
 
         // melhor especificar assim para nao dar confusao em outras partes do codigo
         // id=1 ('Bater ponto sem uniforme', 1),
@@ -69,7 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     };
 
-    // Ao mudar categoria: popula subcategorias vindas do PHP (obj subcategorias)
+    // sobrescrevendo a mesma chave no objeto para os que usam os mesmos campos
+    ["38", "39", "40"].forEach(id => {
+        regrasSubcategoria[id] = () => campoMotivoSAC_1();
+    });
+
+    // Ao mudar categor ia: popula subcategorias vindas do PHP (obj subcategorias)
     selectCategoria.addEventListener('change', function () {
         const categoriaId = String(this.value);
         console.log("categoria selecionada:", categoriaId);
