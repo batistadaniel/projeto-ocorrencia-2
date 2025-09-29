@@ -2,8 +2,8 @@ function campoFuncionario() {
     return `
         <div>
             <label for="crachaFuncionario">Cracha: </label>
-            <input type="text" name="crachaFuncionario" id="crachaFuncionario" required>
-            <labe for="nomeFuncionario"l>Nome: </labe>
+            <input type="text" name="crachaFuncionario" id="crachaFuncionario">
+            <label for="nomeFuncionario">Nome: </label>
             <input type="text" name="nomeFuncionario" id="nomeFuncionario">
             <label for="setorFuncionario">Setor: </label>
             <input type="text" name="setorFuncionario" id="setorFuncionario">
@@ -59,7 +59,13 @@ function campoDescricao () {
 
 function campoMotivoSAC_1 () {
     return `
-        <p>horario</p>
+        <select name="motivo_sac_1" id="motivo_sac_1">
+            <option value="">Selecione...</option>
+            <option value="1">Passou atrasado</option>
+            <option value="2">Passou adiantado</option>
+            <option value="3">Furo de horário - não passou</option>
+            <option value="4">Saída antecipada ou atrasada do terminal</option>
+        </select>
     `;
 }
 
@@ -128,3 +134,4 @@ function campoMotivoSAC_6 () {
         </select>
     `;
 }
+

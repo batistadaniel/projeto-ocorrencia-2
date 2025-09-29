@@ -15,7 +15,17 @@ while ($row = mysqli_fetch_assoc($querySub)) {
     $subcategorias[$row['categoria_id']][] = $row;
 }
 ?>
-<form action="" method="post">
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Ocorrência</title>
+</head>
+<body>
+
+</body>
+</html> -->
+<form action="" method="post" id="formCadOcorrencia">
     <label for="categoria">Categoria:</label>
     <select name="categoria" id="categoria" required>
         <option value="">-- Selecione --</option>
@@ -42,3 +52,4 @@ while ($row = mysqli_fetch_assoc($querySub)) {
 </script>
 <script src="./assets/js/components.js"></script>
 <script src="./assets/js/scripts.js"></script>
+<!-- <script src="./assets/js/autoPreenche.js"></script>  -->
