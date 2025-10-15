@@ -22,6 +22,15 @@ function dataHoraFato() {
     `;
 }
 
+function localFato() {
+    return `
+        <div>
+            <label for="localFato">Local do Fato:</label>
+            <input type="text" name="localFato" id="localFato" required>
+        </div>
+    `;
+}
+
 function campoVeiculo() {
     return `
         <div>
