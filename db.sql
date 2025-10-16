@@ -948,7 +948,7 @@ CREATE TABLE categoria_ocorrencia (
 
 -- insere as categorias de ocorrencias
 INSERT INTO categoria_ocorrencia (nome) VALUES
-('CFTV'),
+('CFTV GARAGEM'),
 ('FLITS'),
 ('MOOVSEC'),
 ('SAC'); 
