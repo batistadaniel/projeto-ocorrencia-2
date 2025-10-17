@@ -81,8 +81,20 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
             font-size: 13px;
             border: none;
             border-radius: 2px;
-             background-color: #1a5223ff;
-             
+            background-color: #e6ece7ff;
+        }
+
+        /* Campo de usuário personalizado para números */
+        .top-bar input[name="usuario"] {
+            background-color: #0d4928ff; /* Cor de fundo personalizada */
+            color: #eeeeeeff;  /* Cor da fonte personalizada */
+            font-weight: bold;  /* Deixa o texto mais destacado */
+        }
+
+        /* Campo de senha */
+        .top-bar input[type="password"] {
+            background-color: #0d4928ff;
+            color: #e4e3e3ff;
         }
 
         .top-bar button {
@@ -194,7 +206,8 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
         <div class="right">
             <form method="POST">
                 <span>👤    ÁREA RESTRITA</span>
-                <input type="text" name="usuario" placeholder="Usuário" required>
+                <!-- Campo 'usuário' agora é de tipo 'text', mas com a validação em JS -->
+                <input type="text" name="usuario" placeholder="usuario" required oninput="validarNumeros(this)">
                 <input type="password" name="senha" placeholder="Senha" required>
                 <button type="submit">Entrar</button>
             </form>
@@ -210,7 +223,6 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
     <!-- Menu -->
     <div class="menu">
         <a href="#">INÍCIO</a>
-        
     </div>
 
     <!-- Erro -->
@@ -233,6 +245,11 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
 
         atualizarDataHora();
         setInterval(atualizarDataHora, 60000);
+
+        // Função para validar se o campo contém apenas números
+        function validarNumeros(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');  // Substitui qualquer coisa que não seja número
+        }
     </script>
 
 </body>
